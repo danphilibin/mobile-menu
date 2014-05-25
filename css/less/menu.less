@@ -14,6 +14,7 @@
 @media screen and (max-width:@mobile-nav-breakpoint) {
   .nav-slide-element {
     .translate(0, 0);
+    -webkit-backface-visibility:hidden;
   }
 }
 
@@ -29,6 +30,7 @@
   .translate(0, 0);
   overflow:scroll;
   display:none;
+  -webkit-backface-visibility:hidden;
 
   // inner shadow along the left side of the menu
   &:before {
@@ -72,11 +74,9 @@
     // use transforms to move everything to the left
     .nav-slide-element {
       .translate(-@mobile-nav-width, 0);
-      -webkit-backface-visibility:hidden;
     }
     #mobile-nav-menu {
       .translate(-@mobile-nav-width, 0);
-      -webkit-backface-visibility:hidden;
       -webkit-overflow-scrolling:touch;
     }
   }
